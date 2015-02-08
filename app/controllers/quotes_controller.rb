@@ -1,6 +1,6 @@
 class QuotesController < ApplicationController
 	def random
-		quote = Quote.order("RANDOM()").first
-		render json:quote
+		QuoteService.new(SlackService.new).sendRandomQuote()
+		render :nothing => true
 	end
 end
