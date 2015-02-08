@@ -77,5 +77,5 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.x.slack.webhook = 'https://hooks.slack.com/services/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'
+  
 end

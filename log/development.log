@@ -2505,3 +2505,31 @@ Processing by QuotesController#random as HTML
   [1m[35mQuote Load (0.7ms)[0m  SELECT  "quotes".* FROM "quotes"  ORDER BY RANDOM() LIMIT 1
   Rendered text template (0.0ms)
 Completed 200 OK in 958ms (Views: 0.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/quotes/random/" for ::1 at 2015-02-08 19:32:25 -0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuotesController#random as HTML
+Completed 500 Internal Server Error in 85ms
+
+SyntaxError (/Users/otavio/git/SlackQuotes/app/services/slack_service.rb:10: syntax error, unexpected tSYMBEG, expecting '}'
+			:username => 'Quote'
+			 ^
+/Users/otavio/git/SlackQuotes/app/services/slack_service.rb:11: syntax error, unexpected '}', expecting keyword_end):
+  app/services/slack_service.rb:10: syntax error, unexpected tSYMBEG, expecting '}'
+  app/services/slack_service.rb:11: syntax error, unexpected '}', expecting keyword_end
+  app/controllers/quotes_controller.rb:3:in `random'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_source.erb (8.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/_web_console.html.erb (0.9ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.0.0/lib/action_dispatch/templates/rescues/diagnostics.html.erb within rescues/layout (30.3ms)
+
+
+Started GET "/quotes/random/" for ::1 at 2015-02-08 19:32:48 -0200
+Processing by QuotesController#random as HTML
+  [1m[35mQuote Load (1.5ms)[0m  SELECT  "quotes".* FROM "quotes"  ORDER BY RANDOM() LIMIT 1
+  Rendered text template (0.0ms)
+Completed 200 OK in 2091ms (Views: 28.4ms | ActiveRecord: 5.4ms)
