@@ -136,8 +136,6 @@ Quote.create({quote: "Object-oriented design is the roman numerals of computing.
 
 Quote.create({quote: "Not only is UNIX dead, it’s starting to smell really bad.", author: "Rob Pike circa 1991"})
 
-Quote.create({quote: "<p>{ajh} I always viewed HURD development like the Special Olympics of free software.</p><hr>cat came back from Berkeley waving flags", author: "Rob Pike"})
-
 Quote.create({quote: "We have persistant(sic) objects, they’re called files.", author: "Ken Thompson"})
 
 Quote.create({quote: "If you want to go somewhere, goto is the best way to get there.", author: "ken"})
